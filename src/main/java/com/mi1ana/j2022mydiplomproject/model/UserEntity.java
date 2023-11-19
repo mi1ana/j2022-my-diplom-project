@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Data
@@ -22,6 +23,14 @@ public class UserEntity {
     private Long id;
 
     private String username;
+
+    private String firstName;
+
+    private String lastName;
+
+    private Date birthDate;
+
+    private String contactPhone;
 
     private String password;
 

@@ -1,27 +1,29 @@
 package com.mi1ana.j2022mydiplomproject.model;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
+@Entity
 @Data
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "regions")
-@Entity
-public class RegionEntity {
+@Table(name = "questions")
+public class QuestionsEntity {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name= "region_name")
-    private String regionName;
+    private String question;
 
-   @Column(name= "sap_code_region")
-    private String sapCodeRegion;
+    @OneToMany
+    @JoinColumn(name = "question_id")
+    private List<AnswersEntity> answers;
 }
