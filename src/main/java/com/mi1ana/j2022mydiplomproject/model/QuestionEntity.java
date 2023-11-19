@@ -1,6 +1,5 @@
 package com.mi1ana.j2022mydiplomproject.model;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,21 +13,17 @@ import java.util.List;
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "topics")
-public class TopicsEntity {
+@Table(name = "questions")
+public class QuestionEntity {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nameTopic;
+    private String question;
 
     @OneToMany
-    @JoinColumn(name = "topic_id")
-    private List<QuestionsEntity> questions;
-
-    @OneToMany
-    @JoinColumn(name = "topic_id")
-    private List<ExamSettingEntity> settings;
+    @JoinColumn(name = "question_id")
+    private List<AnswerEntity> answers;
 }

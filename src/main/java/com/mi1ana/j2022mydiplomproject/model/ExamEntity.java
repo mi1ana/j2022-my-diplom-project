@@ -28,5 +28,5 @@ public class ExamEntity {
     @JoinTable(name = "exam_questions",
             joinColumns = @JoinColumn(name = "exam_id"),
             inverseJoinColumns = @JoinColumn(name = "qestion_id"))
-    private Set<QuestionsEntity> questions;
+    private Set<QuestionEntity> questions;
 }

@@ -2,13 +2,13 @@ package com.mi1ana.j2022mydiplomproject.mappers;
 
 
 import com.mi1ana.j2022mydiplomproject.dto.Topic;
-import com.mi1ana.j2022mydiplomproject.model.TopicsEntity;
+import com.mi1ana.j2022mydiplomproject.model.TopicEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface TopicMapper {
 
-    Topic map(TopicsEntity entity);
+    Topic map(TopicEntity entity);
 
-    TopicsEntity map(Topic dto);
+    TopicEntity map(Topic dto);
 }

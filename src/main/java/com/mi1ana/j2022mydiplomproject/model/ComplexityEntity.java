@@ -29,7 +29,7 @@ public class ComplexityEntity {
 
     @OneToMany
     @JoinColumn(name = "complexity_id")
-    private List<QuestionsEntity> questions;
+    private List<QuestionEntity> questions;
 
     @OneToMany
     @JoinColumn(name = "complexity_id")
