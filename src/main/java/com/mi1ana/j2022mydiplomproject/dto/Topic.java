@@ -22,4 +22,6 @@ public class Topic {
     private List<Question> questions;
 
     private List<ExamSetting> settings;
+
+    private List<Exam> exams;
 }

@@ -6,25 +6,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
-
 @Data
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Result {
+public class QuestionAnswerExam {
 
     private Long id;
 
-    private Exam exam;
+    private String question;
 
-    private Date dateExam;
+    private String answer;
 
-    private UserDto examiner;
+    private boolean correct;
 
-    private UserDto subject;
-
-    private Double result;
-
-    private boolean verified;
+    private Integer resultAnswer;
 }

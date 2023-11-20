@@ -31,4 +31,8 @@ public class TopicEntity {
     @OneToMany
     @JoinColumn(name = "topic_id")
     private List<ExamSettingEntity> settings;
+
+    @OneToMany
+    @JoinColumn(name = "topic_id")
+    private List<ExamEntity> exams;
 }
