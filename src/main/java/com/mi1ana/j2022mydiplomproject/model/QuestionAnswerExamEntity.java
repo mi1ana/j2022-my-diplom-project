@@ -7,17 +7,25 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
 @Data
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "ws_status")
-@Entity
-public class StatusOrderEntity {
+@Table(name = "question_answer_exam")
+
+public class QuestionAnswerExamEntity {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "status_name")
-    private String statusName;
+
+    private String question;
+
+    private String answer;
+
+    private boolean correct;
+
+    private Integer resultAnswer;
 }

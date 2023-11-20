@@ -1,24 +1,22 @@
 package com.mi1ana.j2022mydiplomproject.model;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity
 @Data
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "workers_role")
-@Entity
-public class WorkersRoleEntity {
+@Table(name = "exam_setting")
+public class ExamSettingEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "role_name")
-    private String roleName;
+    private Integer quantity;
 }
