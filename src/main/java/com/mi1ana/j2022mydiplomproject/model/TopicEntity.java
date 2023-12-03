@@ -24,15 +24,15 @@ public class TopicEntity {
 
     private String nameTopic;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "topic_id")
     private List<QuestionEntity> questions;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "topic_id")
     private List<ExamSettingEntity> settings;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "topic_id")
     private List<ExamEntity> exams;
 }
